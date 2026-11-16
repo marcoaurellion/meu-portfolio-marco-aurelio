@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio pessoal de Marco Aurélio, estudante de tecnologia.">
+  <title>Marco Aurélio | Portfólio</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <a class="pular" href="#sobre">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <nav aria-label="Menu principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#skills">Skills</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SOBRE -->
+    <section id="sobre" class="secao claro">
+      <div class="conteudo sobre">
+        <img class="foto" src="imagens/foto.jpg" alt="Foto de perfil de Marco Aurélio" width="200" height="200">
+        <div>
+          <h1>Marco Aurélio do Nascimento Rodrigues</h1>
+          <p class="subtitulo">Análise e Desenvolvimento de Sistemas · BOQUIM, SE</p>
+          <p>Estudante de Análise e Desenvolvimento de Sistemas na Universidade Tiradentes (UNIT), em constante evolução nas áreas de tecnologia e programação. 
+</p>
+          <p>Meu principal foco profissional é consolidar minha carreira no setor de TI, transformando o aprendizado acadêmico em soluções práticas e buscando aprimoramento contínuo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="secao escuro">
+      <div class="conteudo">
+        <h2>Portfólio</h2>
+        <div class="carrossel">
+          <button class="seta" id="anterior" aria-label="Projeto anterior">&#9664;</button>
+          <ul class="trilho" id="trilho" tabindex="0" aria-label="Lista de projetos">
+            <li class="cartao">
+              <img src="imagens/p1.svg" alt="Ilustração do Projeto 1" loading="lazy">
+              <h3>Projeto 1 - Calculadora</h3>
+              <p>Calculadora web com as quatro operações básicas, botão de limpar e tratamento de divisão por zero. Habilidades: HTML, CSS e JavaScript (eventos e funções).</p>
+              <a href="projetos/Calc/index.html" class="link">Ver projeto</a>
+            </li>
+            <li class="cartao">
+              <img src="imagens/p2.svg" alt="Ilustração do Projeto 2" loading="lazy">
+              <h3>Projeto 2 - Lâmpada</h3>
+              <p>Lâmpada interativa que acende e apaga ao clicar no botão, trocando a imagem na tela. Habilidades: manipulação do DOM e eventos em JavaScript.</p>
+              <a href="projetos/Lampada/index.html" class="link">Ver projeto</a>
+            </li>
+            <li class="cartao">
+              <img src="imagens/p3.svg" alt="Ilustração do Projeto 3" loading="lazy">
+              <h3>Projeto 3 - Lista de tarefas</h3>
+              <p>Lista em que é possível adicionar, marcar como concluída e remover tarefas. Habilidades: JavaScript, manipulação de listas e usabilidade.</p>
+              <a href="projetos/lista-tarefas/index.html" class="link">Ver projeto</a>
+            </li>
+          </ul>
+          <button class="seta" id="proximo" aria-label="Próximo projeto">&#9654;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="secao claro">
+      <div class="conteudo">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li><span class="nome">HTML</span><div class="barra" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="HTML: 50%"><div style="width:50%"></div></div></li>
+          <li><span class="nome">CSS</span><div class="barra" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="CSS: 40%"><div style="width:40%"></div></div></li>
+          <li><span class="nome">JavaScript</span><div class="barra" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript: 30%"><div style="width:30%"></div></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao escuro">
+      <div class="conteudo">
+        <h2>Contato</h2>
+        <div class="contato">
+          <div class="caixa mapa">
+            <iframe title="Mapa: Boquim, Sergipe" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Boquim,+SE&amp;output=embed"></iframe>
+            <p class="legenda">Boquim, Sergipe, Brasil</p>
+          </div>
+          <form class="caixa" id="form" novalidate>
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" aria-describedby="erro-nome">
+            <span class="erro" id="erro-nome" role="alert"></span>
+
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" autocomplete="email" aria-describedby="erro-email">
+            <span class="erro" id="erro-email" role="alert"></span>
+
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem" rows="5" aria-describedby="erro-mensagem"></textarea>
+            <span class="erro" id="erro-mensagem" role="alert"></span>
+
+            <button type="submit">Enviar</button>
+            <p class="sucesso" id="sucesso" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Marco Aurélio &copy; <span id="ano">2026</span>. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
